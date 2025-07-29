@@ -1,0 +1,162 @@
+/*--------------------------------------
+  1. Base & Fonts
+--------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body.landing-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1c0c1d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* full‑screen overlay for subtle gradient */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at top left,
+    rgba(16,254,19,0.2),
+    rgba(13,10,35,0.8));
+  pointer-events: none;
+  z-index: -1;
+}
+
+/*--------------------------------------
+  2. Typography & Headings
+--------------------------------------*/
+.neon-title {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #0ee7fe;
+  text-shadow:
+    0 0 8px #0ee7fe,
+    0 0 16px #0ee7fe;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.neon-subtitle {
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #ffeb0a;
+  text-shadow: 0 0 6px #ffeb0a;
+}
+
+.section-heading {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fd0faf;
+  text-shadow: 0 0 8px #fd0faf;
+  animation: slideIn 1s ease-out;
+}
+
+/*--------------------------------------
+  3. Feature List
+--------------------------------------*/
+.features-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+.features-list li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  animation: fadeInUp 0.8s ease-out both;
+}
+.features-list li::before {
+  content: '►';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10fe13;
+  text-shadow: 0 0 4px #10fe13;
+}
+
+/*--------------------------------------
+  4. Call‑to‑Action Button
+--------------------------------------*/
+.lp-cta {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.neon-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #fd0faf, #0ee7fe);
+  color: #000;
+  padding: 0.75em 2em;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow:
+    0 0 8px #fd0faf,
+    0 0 16px #0ee7fe;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.neon-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 16px #fd0faf,
+    0 0 32px #0ee7fe;
+}
+
+/*--------------------------------------
+  5. Footer
+--------------------------------------*/
+.lp-footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #10fe13;
+  color: #999;
+  font-size: 0.9rem;
+}
+.lp-footer a {
+  color: #10fe13;
+  text-decoration: none;
+}
+.lp-footer a:hover {
+  text-decoration: underline;
+}
+
+/*--------------------------------------
+  6. Animations
+--------------------------------------*/
+@keyframes glow {
+  from { text-shadow: 0 0 8px #0ee7fe; }
+  to   { text-shadow: 0 0 20px #0ee7fe; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/*--------------------------------------
+  7. Responsive
+--------------------------------------*/
+@media(max-width: 768px) {
+  .neon-title { font-size: 2.5rem; }
+  .neon-subtitle { font-size: 1.1rem; margin-bottom: 2rem; }
+  .section-heading { font-size: 1.75rem; }
+  .features-list li { font-size: 1rem; }
+  .neon-btn { width: 80%; padding: 0.75em; }
+}

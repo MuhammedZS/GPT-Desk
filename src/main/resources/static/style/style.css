@@ -1,0 +1,142 @@
+body.chat-container {
+    background-color: #1c0c1d;
+    color: #10fe13;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 1s ease-in;
+}
+
+.neon-heading {
+    color: #0ee7fe;
+    text-shadow: 0 0 10px #0ee7fe, 0 0 20px #0ee7fe;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.neon-label {
+    color: #ffeb0a;
+    font-weight: bold;
+}
+
+.neon-input {
+    background-color: transparent;
+    border: 2px solid #10fe13;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+.neon-input:focus {
+    box-shadow: 0 0 10px #fd0faf;
+    border-color: #fd0faf;
+    background-color: #2a0c2f;
+}
+
+.lp-cta {
+    text-align: right;
+}
+
+.neon-btn {
+    background: linear-gradient(45deg, #fd0faf, #0ee7fe);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #fd0faf, 0 0 20px #0ee7fe;
+}
+.neon-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #0ee7fe, 0 0 40px #fd0faf;
+}
+
+.neon-alert {
+    background-color: black;
+    border: 1px solid #fd0faf;
+    color: #2a0c2f;
+    box-shadow: 0 0 10px #fd0faf;
+}
+
+.neon-hr {
+    border-top: 2px dashed #10fe13;
+    
+}
+
+.neon-subheading {
+    color: #fd0faf;
+    text-shadow: 0 0 8px #fd0faf;
+    margin-bottom: 20px;
+}
+
+.chat-box {
+    background-color: #2a0c2f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0ee7fe;
+}
+
+.chat-entry {
+    background-color: #1c0c1d;
+    color: #fff;
+    border: 1px solid #10fe13;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.user-label {
+    color: #0ee7fe;
+}
+
+.gpt-label {
+    color: #ffeb0a;
+}
+
+.neon-footer {
+    margin-top: 50px;
+    color: #999;
+    font-size: 0.9rem;
+}
+.neon-footer a {
+    color: #0ee7fe;
+    text-decoration: none;
+}
+.neon-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .neon-heading {
+        font-size: 2rem;
+    }
+
+    .neon-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .neon-input {
+        width: 100%;
+    }
+
+    .chat-box {
+        padding: 10px;
+    }
+}
