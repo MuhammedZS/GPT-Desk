@@ -1,6 +1,7 @@
 package ca.sheridancollege.siddiq73.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,9 @@ public class GPTController {
 
 	@Autowired
 	private OpenAiService openAiService;
+	
+	@Value("${spring.ai.openai.api-key}")
+	private String apiKey;
 
 	@PostMapping("/GPTDesk")
 	public Answer askQuestion(@RequestBody Question question) {

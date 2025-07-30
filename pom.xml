@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.sheridancollege.siddiq73</groupId>
-	<artifactId>lec121_SpringAI</artifactId>
+	<artifactId>MZS_SpringAI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MZS_SpringAI</name>
 	<description>RESTFul Service</description>
